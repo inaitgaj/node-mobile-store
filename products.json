@@ -1,0 +1,28 @@
+//insert products
+db.products.insert({"productId" : 1234, "name" : "2", "brand" : "OnePlus", "screen" : "5.5 inches", "camera" : "13 MP", "ois" : true, "os" : "Android Marshmellow", "description" : "So, another flagship killer means a) the original left some unfinished business or b) OnePlus ran out of smart taglines. It would've made little sense to OnePlus to revise the job description but, while the OnePlus 2 is clearly superior it lacks one thing the original had, the benefit of surprise.", "images" : [ "https://cdn2.gsmarena.com/vv/pics/oneplus/oneplus-two-1.jpg", "https://cnet4.cbsistatic.com/img/yHjI4jl68q-2bAcqLnz18vD5CUo=/fit-in/970x0/2015/07/27/757caa77-5777-49c1-9ce3-4314f5857a3f/oneplus-2-9068-005.jpg" ], "price" : 25000, "currency" : "INR", "stock" : 20, "battery" : "3300 mah", "ram" : "4GB", processor: "Qualcomm Snapdragon 810", gpu : "Adreno 430" })
+
+db.products.insert({"productId" : 1235, "name" : "G6", "brand" : "LG", "screen" : "5.7 inches", "camera" : "Dual 13 MP (f/1.8 1.12 µm) + 13 MP (f/2.4, no AF)", "ois" : true, "os" : "Android Nougat", "description" : "Cutting corners - it's the story of the LG G6's life. And we mean this both literally and figuratively. Literally because its display doesn't have right angles, it's soft arcs instead. And figuratively because the G6 doesn't come with the screaming hardware on the market, but makes do with a few-months-old chipset and 'just' 4GB of RAM. What happened to 'flagship'?", "images" : [ "https://cdn2.gsmarena.com/vv/pics/lg/lg-g6-1.jpg", "https://images-na.ssl-images-amazon.com/images/I/51txrGJAdiL._SX425_.jpg" ], "price" : 25000, "currency" : "INR", "stock" : 20, "battery" : "3300 mah", "ram" : "4GB", processor: "Qualcomm MSM8996 Snapdragon 821", gpu : "Adreno 530"})
+
+db.products.insert({"productId" : 1236, "name" : "Galaxy S9", "brand" : "Samsung", "screen" : "5.8 inches Super AMOLED", "camera" : " Dual Camera, 12 MP Primary", "ois" : true, "os" : "Android 8.0 (Oreo)", "description" : "Iris scanner, fingerprint (rear-mounted), accelerometer, gyro, proximity, compass, barometer, heart rate, SpO2, ", "images" : [ "https://cdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s9-2.jpg", "https://cdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s9-1.jpg" ], "price" : 75000, "currency" : "INR", "stock" : 20, "battery" : "3000 mah", "ram" : "4GB", processor: "Exynos 9810 Octa - EMEA \nQualcomm MSM8998 Snapdragon 845 - USA & China", gpu : "Mali-G72 MP18 - EMEA \nAdreno 630 - USA & China" })
+
+db.products.insert({ "productId" : 1237, "name" : "Pixel 2", "brand" : "Google", "screen" : "5.0 inches AMOLED", "camera" : "12.2 MP", "ois" : true, "os" : "Android 8.0", "description" : "One pixel two, two pixel twos, large pixel two, small pixel two, pixels twos everywhere. Except in Google online stores, but that's a whole different matter. The true Pixel experience in a (slightly) smaller package and minus the display issues - this is the Google Pixel 2 in size Medium and not Extra Large.", "images" : [ "https://cdn2.gsmarena.com/vv/pics/google/google-pixel-2-1.jpg", "https://cdn2.gsmarena.com/vv/pics/google/google-pixel-2-5.jpg" ], "price" : 65000, "currency" : "INR", "stock" : 20, "battery" : "2700 mah", "ram" : "4GB", processor: "Qualcomm Snapdragon 835", gpu : "Adreno 540" })
+
+db.products.insert({"productId" : 1238, "name" : "iPhone X", "brand" : "Apple", "screen" : "5.8 inches SUPER AMOLED", "camera" : "Dual: 12 MP(f/1.8, 28mm) + 12 MP (f/2.4, 52mm)", "ois" : true, "os" : "iOS 11.1.1", "description" : "new Description goes here", "images" : [ "https://cdn2.gsmarena.com/vv/pics/apple/apple-iphone-x-new-1.jpg", "https://cdn2.gsmarena.com/vv/pics/apple/apple-iphone-x-4.jpg" ], "price" : 95000, "currency" : "INR", "stock" : 20, "battery" : "2716 mah", "ram" : "4GB" , processor: "Apple A11 Bionic", gpu : "Apple GPU (three-core graphics)" })
+
+//to ensure text index for searching.
+db.products.ensureIndex({
+    "brand": "text",
+    "name": "text",
+    "description": "text",
+    "os":"text",
+    "processor": "text",
+    "gpu":"text"
+},
+{
+    "weights":
+    {
+        "brand": 5,
+        "name" : 5,
+        "description" : 2
+    }
+})
