@@ -14,7 +14,8 @@ var express = require('express')
   , favicon = require('serve-favicon')
   , logger = require('morgan')
   , cookieParser = require('cookie-parser')
-  , bodyParser = require('body-parser');
+  , bodyParser = require('body-parser')
+  , errorHandler = require('express-error-handler');
 
 
 
@@ -68,7 +69,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // development only
 if ('development' == app.get('env')) {
-  app.use(express.errorHandler());
+  app.use(errorHandler());
 }
 
 // Make our db accessible to our router

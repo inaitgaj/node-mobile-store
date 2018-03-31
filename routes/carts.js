@@ -149,7 +149,7 @@ calculate = function(req, cart, detail, next){
   for(var i = 0; i < cart.entries.length; i++){
     var entry =cart.entries[i];
     collectionProducts.findOne({productId: 1 * entry.productId},{},function(e,doc){
-          console.log('adding product'+doc.productId+ 'quantity ='+'quantity'+doc.price,);
+          console.log('adding product'+doc.productId+ 'quantity ='+'quantity'+doc.price);
           cart.total += doc.price *  cart.entries[consumed].quantity;
           if(detail == true){
             cart.entries[consumed].product = doc;
