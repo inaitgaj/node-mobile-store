@@ -1,0 +1,29 @@
+Sun, 01 Apr 2018 05:12:19 GMT express-session deprecated undefined resave option; provide resave option at app.js:56:9
+Sun, 01 Apr 2018 05:12:19 GMT express-session deprecated undefined saveUninitialized option; provide saveUninitialized option at app.js:56:9
+Express server listening on port 3000
+Sun, 01 Apr 2018 10:23:40 GMT express-session deprecated undefined resave option; provide resave option at app.js:56:9
+Sun, 01 Apr 2018 10:23:40 GMT express-session deprecated undefined saveUninitialized option; provide saveUninitialized option at app.js:56:9
+events.js:141
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE :::3000
+    at Object.exports._errnoException (util.js:870:11)
+    at exports._exceptionWithHostPort (util.js:893:20)
+    at Server._listen2 (net.js:1237:14)
+    at listen (net.js:1273:10)
+    at Server.listen (net.js:1369:5)
+    at Object.<anonymous> (/home/ubuntu/assignment/node-mobile-store/app.js:87:24)
+    at Module._compile (module.js:410:26)
+    at Object.Module._extensions..js (module.js:417:10)
+    at Module.load (module.js:344:32)
+    at Function.Module._load (module.js:301:12)
+Sun, 01 Apr 2018 10:24:59 GMT express-session deprecated undefined resave option; provide resave option at app.js:56:9
+Sun, 01 Apr 2018 10:24:59 GMT express-session deprecated undefined saveUninitialized option; provide saveUninitialized option at app.js:56:9
+Express server listening on port 3000
+session cart not found
+req.session.cart + {"entries":[],"total":0,"user":null,"createdts":"2018-04-01T10:25:00.427Z","_id":"5ac0b37c885c405a06ee5840"}, {"entries":[],"total":0,"user":null,"createdts":"2018-04-01T10:25:00.427Z","_id":"5ac0b37c885c405a06ee5840"}
+[0mGET /carts [32m200 [0m711.630 ms - 108[0m
+Cart found in session
+[0mGET /carts [36m304 [0m2.619 ms - -[0m
+[0mGET / [36m304 [0m1.728 ms - -[0m
